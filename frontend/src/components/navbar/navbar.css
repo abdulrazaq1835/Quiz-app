@@ -39,7 +39,7 @@ padding: 6px 20px;
    
 }
 
-.result-btn active{
+.result-btn:active{
 background-color: #2563eb;
   color: #ffffff;
   border-color: #1d4ed8;
@@ -83,13 +83,25 @@ padding: 6px 20px;
     .login-btn {
         font-size: 18px;
         padding: 8px 16px;
+        display: none;
     }
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    color: white;
 }
 
 /* Mobile */
 @media (max-width: 480px) {
     .nav {
         padding: 10px;
+    }
+    .menu-icon{
+        display: block;
+        display: flex;
+        
     }
     
     .nav h2 {
@@ -101,6 +113,8 @@ padding: 6px 20px;
         gap: 0.5rem;
         width: 100%;
     }
+
+  
     
     .result-btn,
     .login-btn {

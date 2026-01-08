@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./navbar.css";
 import { NavLink } from "react-router-dom";
+import { MenuIcon, X } from "lucide-react";
 
 const Navbar = () => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -12,6 +13,14 @@ const Navbar = () => {
       localStorage.clear();
     } catch (error) {}
   };
+
+ const toggleMenu = ()=>{
+ setMenuOpen(!menuOpen)
+
+ }
+ const closeMenu =()=>{
+  setMenuOpen(false)
+ }
 
   return (
     <nav className="nav">
@@ -37,10 +46,29 @@ const Navbar = () => {
             Login
           </NavLink>
         )}
-      </div>
 
-      <div>
-        
+  {/* // menu iccon */}
+
+       {menuOpen ? (
+        <X className="menu-icon" size={28} onClick={toggleMenu}/>
+       ):(
+        <MenuIcon className="menu-icon" size={28} onClick={toggleMenu}/> 
+       )}
+
+{/* moblile menu */}
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </nav>
   );
