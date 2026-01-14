@@ -1,3 +1,4 @@
+
 .nav {
     height: 70px;
     width: 100%;
@@ -62,6 +63,10 @@ padding: 6px 20px;
    text-decoration: none;
 }
 
+/* .mob-menu{
+    display: none;
+} */
+
 
 @media (max-width: 768px) {
     .nav {
@@ -93,8 +98,9 @@ padding: 6px 20px;
     color: white;
 }
 
+
 /* Mobile */
-@media (max-width: 480px) {
+@media (max-width: 760px) {
     .nav {
         padding: 10px;
     }
@@ -125,5 +131,12 @@ padding: 6px 20px;
       width: 100%;
     }
 
-    
+    .mob-menu{
+    width: 250px;
+    height: 200px;
+    background-color: aqua;
+
 }
+
+    
+}  
